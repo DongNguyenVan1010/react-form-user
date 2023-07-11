@@ -11,7 +11,7 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
 
-export default function FormInput({users, setUsers}) {
+export default function FormInput({ users, setUsers }) {
   const [form, setForm] = useState({
     firstname: '',
     lastname: '',
@@ -63,7 +63,8 @@ export default function FormInput({users, setUsers}) {
   console.log(users)
 
   return (
-    <>
+    <div style={{ marginLeft: '30px' }}>
+      <h1>Form Register</h1>
       <form onSubmit={onSubmit}>
         <Grid container spacing={5}>
           <Grid item xs={12}>
@@ -133,6 +134,6 @@ export default function FormInput({users, setUsers}) {
           </Grid>
         </Grid>
       </form>
-    </>
+    </div>
   );
 }

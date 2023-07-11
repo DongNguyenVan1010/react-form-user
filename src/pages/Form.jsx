@@ -5,11 +5,11 @@ import ListUser from "../components/ListUser";
 export default function Form() {
   const [users, setUsers] = useState([])
   return (
-    <>
-      <h1>Form Register</h1>
+    <div>
+
       <FormInput users={users} setUsers={setUsers} />
-      <h1>List User</h1>
+      <div style={{ borderTop: " 0.5px solid gray", marginLeft: 10, marginRight: 10, marginTop: 40 }}></div>
       <ListUser users={users} />
-    </>
+    </div>
   )
 }

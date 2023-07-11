@@ -8,30 +8,33 @@ import TableCell from '@mui/material/TableCell';
 
 export default function ListUser({ users }) {
     return (
-        <TableContainer sx={{ marginTop: 5 }}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>First Name</TableCell>
-                        <TableCell>Last Name</TableCell>
-                        <TableCell>Email</TableCell>
-                        <TableCell>Gender</TableCell>
-                        <TableCell>State</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {users.map((user, index) => (
-                        <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell>{user.firstname}</TableCell>
-                            <TableCell>{user.lastname}</TableCell>
-                            <TableCell>{user.email}</TableCell>
-                            <TableCell>{user.gender}</TableCell>
-                            <TableCell>{user.state}</TableCell>
+        <div style={{ marginLeft: '30px' }}>
+            <h1>List User</h1>
+            <TableContainer sx={{ marginTop: 5 }}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>First Name</TableCell>
+                            <TableCell>Last Name</TableCell>
+                            <TableCell>Email</TableCell>
+                            <TableCell>Gender</TableCell>
+                            <TableCell>State</TableCell>
                         </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+                    </TableHead>
+                    <TableBody>
+                        {users.map((user, index) => (
+                            <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                <TableCell>{user.firstname}</TableCell>
+                                <TableCell>{user.lastname}</TableCell>
+                                <TableCell>{user.email}</TableCell>
+                                <TableCell>{user.gender}</TableCell>
+                                <TableCell>{user.state}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </div>
     );
 }
 
